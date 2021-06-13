@@ -6,9 +6,10 @@ import {
 	Heading,
 	Flex
 } from '@chakra-ui/react';
-
+import { useRouter } from "next/router";
 
 const Navbar = (props) => {
+  const router = useRouter()
 
 	return (
 		<Flex
@@ -16,7 +17,8 @@ const Navbar = (props) => {
 			align="center"
 			justify="space-between"
 			wrap="wrap"
-			padding={4}
+      padding={2}
+      pb={4}
 			bg="#f5f5f5"
 			color="white"
 			boxShadow="0 5px 10px rgb(154 160 185 / 5%), 0 15px 40px rgb(166 173 201 / 20%)"
@@ -26,7 +28,7 @@ const Navbar = (props) => {
 			<Flex align="center" mr={5}>
 				<Box objectFit="cover">
 					<Link href="/">
-						<Heading as="h1" size="lg" letterSpacing={'tighter'} color="#000">
+						<Heading as="h1" size="lg" letterSpacing={'tighter'} color="#000" className="head">
 							AlishaM
 						</Heading>
 					</Link>
@@ -41,11 +43,11 @@ const Navbar = (props) => {
 					alignItems="right"
 					color="black"
 					flexGrow={1}
-					mt={{ base: 2, md: 0 }}
-				>
-					<Link href="/">Docs</Link>
-					<Link href="/">Examples</Link>
-					<Link href="/">Blog</Link>
+          mt={{ base: 2, md: 0 }}
+          px="2rem"
+        >
+            {/* <span className={router.pathname == "/mywork" ? "active" : ""}><Link href="/mywork" >My Work</Link></span>
+            <span className={router.pathname == "/aboutme" ? "active" : ""}><Link href="/aboutme">About Me</Link></span> */}
 				</Stack>
 			</Box>
 		</Flex>

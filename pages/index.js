@@ -1,38 +1,42 @@
-import Head from 'next/head';
-import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-import { Box, SimpleGrid } from '@chakra-ui/react';
+import { Box, SimpleGrid, Text, Image, Flex } from '@chakra-ui/react';
 
 export default function Home() {
 	return (
 		<Box>
-			<Navbar></Navbar>
 			<Box postion="relative">
 				<SimpleGrid
 					align="center"
 					justify={{ base: 'center', md: 'space-around' }}
 					direction={{ base: 'column-reverse', md: 'row' }}
 					minH={[50, 60, 70]}
-					px={8}
-					mb={8}
-					pt={[20, 50, 70, 120]}
-          pb={[10, 30, 50, 70]}
-          mx={[10,20,30,40]}
+					px={[2,2,2,8]}
+					pt={[10, 30, 30, 50]}
+					pb={[10, 30, 30, 50]}
+					mx={[10, 20, 20, 40]}
 				>
-					Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem Ipsum has been the industry's standard dummy text ever
-					since the 1500s, when an unknown printer took a galley of type and
-					scrambled it to make a type specimen book. It has survived not only
-					five centuries, but also the leap into electronic typesetting,
-					remaining essentially unchanged. It was popularised in the 1960s with
-					the release of Letraset sheets containing Lorem Ipsum passages, and
-					more recently with desktop publishing software like Aldus PageMaker
-					including versions of Lorem Ipsum.
+					<Box pb={4}>
+						<Image
+							borderRadius="full"
+							boxSize="170px"
+							src="alisha-bg.jpg"
+							alt="Alisha Mohanty"
+						/>
+					</Box>
+					<Box>
+						Namaste. I am <Text as="abbr" fontWeight="bold">Alisha Mohanty</Text>, Software Engineer working at
+						Accenture, open source contributer and a freelancer from India.
+						Developing software since 2018.
+						<br />I am an ambivert who loves to discover new art and culture and
+						understand human psychology. My vibe is mostly lofi music, sipping
+						coffee and scribbling my ipad while being close to nature. Always up
+						for working on new ideas, learning new skills, technologies tools
+						and sharing conversations.🙃
+					</Box>
 				</SimpleGrid>
 			</Box>
-			<Footer></Footer>
 		</Box>
 	);
 }
