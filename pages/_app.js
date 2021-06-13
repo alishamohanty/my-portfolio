@@ -1,7 +1,6 @@
 import '../styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Layout from '../components/Layout'
 import ReactGA from 'react-ga'
 
 function MyApp({ Component, pageProps }) {
@@ -13,9 +12,9 @@ function MyApp({ Component, pageProps }) {
 
 	return (
 		<ChakraProvider>
-			<Navbar />
+			<Layout>
 			<Component {...pageProps} />
-			<Footer />
+			</Layout>
 		</ChakraProvider>
 	);
 }
