@@ -1,14 +1,11 @@
 import '../styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import Layout from '../components/Layout'
-import ReactGA from 'react-ga'
+import Router from 'next/router'
+
+Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
 
 function MyApp({ Component, pageProps }) {
-
-	if (process.browser) {
-		ReactGA.initialize('G-K90QLYFF0M')
-		ReactGA.pageview(window.location.pathname + window.location.search)
-	}
 
 	return (
 		<ChakraProvider>
