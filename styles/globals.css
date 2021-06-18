@@ -25,9 +25,9 @@ body::-webkit-scrollbar-thumb
 .active {
   text-decoration: underline;
   text-decoration-color: #FBB946;
-  border-bottom: 4px solid #FBB946;
+  border-bottom: 2px solid #FBB946;
   display: inline-block;
-  line-height: 1;
+  line-height: 0.7;
 }
 .head{
   display: inline-block;

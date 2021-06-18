@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import Layout from '../components/Layout'
 import Router from 'next/router'
+import * as gtag from '../utils/gtag'
 
 Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
 

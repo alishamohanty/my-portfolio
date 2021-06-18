@@ -44,10 +44,9 @@ const Navbar = (props) => {
 					color="black"
 					flexGrow={1}
           mt={{ base: 2, md: 0 }}
-          px="2rem"
         >
-            {/* <span className={router.pathname == "/mywork" ? "active" : ""}><Link href="/mywork" >My Work</Link></span>
-            <span className={router.pathname == "/aboutme" ? "active" : ""}><Link href="/aboutme">About Me</Link></span> */}
+            <span className={router.pathname == "/projects" ? "active" : ""}><Link href="/projects" >Projects</Link></span>
+            {/* <span className={router.pathname == "/aboutme" ? "active" : ""}><Link href="/aboutme">About Me</Link></span> */}
 				</Stack>
 			</Box>
 		</Flex>
