@@ -2,7 +2,6 @@ import { Box, SimpleGrid, Text, Image, Flex } from '@chakra-ui/react';
 
 export default function Home() {
 	return (
-		<Box>
 			<Box postion="relative">
 					<Box pb={4}>
 						<Image
@@ -23,6 +22,5 @@ export default function Home() {
 						and sharing conversations.🙃
 					</Box>
 			</Box>
-		</Box>
 	);
 }

@@ -2,42 +2,34 @@
     title: "Uncopied",
     imageSrc: "Uncopied.png",
     imageAlt: "Uncopied ",
-    description: "",
-    link: "",
+    description: "Frontend Developer at uncopied.org",
+    link: "https://uncopied-art-gl7dz.ondigitalocean.app/",
     github: "",
-    time: "12 May",
-    place:"Bhu, India"
+    time: "Feb - June 2021",
+    place: "Remote",
+    borderColor:"#ffc3c3"
   },
   {
     title: "Unicode to Akruti",
     imageSrc: "UnicodeToAkruti.png",
     imageAlt: "Unicode to Akruti",
-    description: "",
-    link: "",
+    description: "Product Designer at unnatipathe.com",
+    link: "https://unicodetoakruti.netlify.app/",
     github: "",
-    time: "12 May",
-    place:"Bhu, India"
+    time: "Jul - Aug 2020",
+    place: "BBSR, India",
+    borderColor:"#ff848d"
     },
     {
-      title: "Unicode to Akruti",
+      title: "Fedora Happiness Packets",
       imageSrc: "fhp.png",
-      imageAlt: "Unicode to Akruti",
-      description: "",
-      link: "",
+      imageAlt: "Fedora Happiness Packets",
+      description: "Outreachy Intern at Fedora",
+      link: "https://pagure.io/fedora-commops/fedora-happiness-packets",
       github: "",
-      time: "12 May",
-      place:"Bhu, India"
-    },
-    {
-      title: "Unicode to Akruti",
-      imageSrc: "Uncopied.png",
-      imageAlt: "Unicode to Akruti",
-      description: "",
-      link: "",
-      github: "",
-      time: "12 May",
-      place:"Bhu, India"
-    }
-    
+      time: "May - July 2019",
+      place: "Remote",
+      borderColor:"#cee1ff"
+    }    
 ]
 export default projects

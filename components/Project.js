@@ -1,43 +1,72 @@
-import {Box, Badge, Image, StarIcon} from '@chakra-ui/react'
+import { Box, Image, Flex , IconButton  } from '@chakra-ui/react';
+import { FaGithub} from 'react-icons/fa';
+import {useRouter} from 'next/router'
 
 const Project = ({ project }) => {
-  console.log(project)
-  const property = {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    beds: 3,
-    baths: 2,
-    title: "Modern home in city center in the heart of historic Los Angeles",
-    formattedPrice: "$1,900.00",
-    reviewCount: 34,
-    rating: 4
+  const router = useRouter()
+  const routeToLink = () => {
+    router.push(project.link)
   }
-  return (
-  
-    <Box maxW="md" borderWidth="1px" borderRadius="lg" overflow="hidden">
-    <Image src={project.imageSrc} alt={project.imageAlt} />
-    <Box p="4">
+	return (
+		<Box overflow="hidden" mb={10}>
       <Box
-        mt="1"
-        fontWeight="semibold"
-        as="h4"
-        lineHeight="tight"
-        isTruncated
+        borderRadius="5px"
+				borderColor={project.borderColor}
+				borderWidth="20px"
+				borderBottom="0px"
+        _hover={{ transition: 'transform .5s', transform: 'scale(1.02)', cursor: "pointer" }}
+        onClick={routeToLink}
+        onBlur={{ transition: 'transform .5s ease-out', transform: 'scale(1)' }}
       >
-        {project.title}
-          </Box>
-          <Box
-          color="gray.500"
-          fontWeight="semibold"
-          letterSpacing="wide"
-          fontSize="xs"
-          textTransform="uppercase"
-          ml="2"
-        >
-          {project.time} &bull; {project.place}
-        </Box>
-      </Box>
-  </Box>  )
-}
+				<Image src={project.imageSrc} alt={project.imageAlt} />
+			</Box>
+			<Box p="4">
+				<Flex
+					fontStyle="normal"
+					fontWeight="400"
+					color="#343b4c"
+					fontSize="18px"
+					justifyContent="space-between"
+					mt="1"
+				>
+					<Box textAlign="left">{project.title}</Box>
+					<Box textAlign="right" pb={2}>
+						{project.github ? (
+              <IconButton
+                as="a"
+                backgroundColor="#fff"
+								href={project.github}
+								aria-label="Twitter"
+								icon={<FaGithub fontSize="20px" />}
+							/>
+						) : (
+							''
+						)}
+					</Box>
+				</Flex>
+				<Box
+					color="gray.500"
+					fontFamily="body"
+					letterSpacing="wide"
+					fontSize="14px"
+					textAlign="left"
+				>
+					{project.description}
+				</Box>
+        <Box
+          pt={4}
+					color="gray.500"
+					fontFamily="body"
+					letterSpacing="wide"
+					fontSize="12px"
+					textTransform="uppercase"
+					textAlign="left"
+				>
+					{project.time} &bull; {project.place}
+				</Box>
+			</Box>
+		</Box>
+	);
+};
 
-export default Project
+export default Project;

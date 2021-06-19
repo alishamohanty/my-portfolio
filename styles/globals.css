@@ -2,37 +2,28 @@
 	font-family: sans-serif;
 	text-align: center;
 	background-color: #f5f5f5;
-}
-body::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px #bebdbd;
-	background-color: #F5F5F5;
+  overflow: hidden;
 }
 
 body::-webkit-scrollbar
 {
-	width: 15px;
-	background-color: #F5F5F5;
-  height: 40px;
-}
-
-body::-webkit-scrollbar-thumb
-{
-	background-color: #bebdbd;
-	border: 2px solid #f5f5f5;
+  display: none;
 }
 
 .active {
   text-decoration: underline;
   text-decoration-color: #FBB946;
-  border-bottom: 2px solid #FBB946;
+  margin-top: 3px;
+  border-bottom: 3px solid #FBB946;
   display: inline-block;
-  line-height: 0.7;
+  bottom: 0px;
+  line-height: 1;
 }
 .head{
   display: inline-block;
   position: relative;
   line-height: 1;
+  cursor: pointer;
 }
 .head:after {
   position: absolute;
@@ -40,6 +31,19 @@ body::-webkit-scrollbar-thumb
   border-bottom: 4px solid #FBB946;
   width: 70%;
   transform: translateX(-50%);
-  bottom: -5px;
+  bottom: 0px;
   left: 80%;
+}
+.yellowUnderline {
+  position: relative;
+  line-height: 1;
+}
+.yellowUnderline:after {
+  position: absolute;
+  content: '';
+  border-bottom: 4px solid #fbc546;
+  width: 70px;
+  /* transform: translateX(-50%); */
+  bottom: 25px;
+  right: 80%;
 }

@@ -26,9 +26,9 @@ const Navbar = (props) => {
 			pl={[4, 19, 50, 100]}
 		>
 			<Flex align="center" mr={5}>
-				<Box objectFit="cover">
-					<Link href="/">
-						<Heading as="h1" size="lg" letterSpacing={'tighter'} color="#000" className="head">
+				<Box objectFit="cover" >
+					<Link href="/" >
+						<Heading size="lg" letterSpacing={'tighter'} color="#000" className="head">
 							AlishaM
 						</Heading>
 					</Link>
@@ -44,9 +44,10 @@ const Navbar = (props) => {
 					color="black"
 					flexGrow={1}
           mt={{ base: 2, md: 0 }}
+          pt={2}
+          px={2}
         >
-            <span className={router.pathname == "/projects" ? "active" : ""}><Link href="/projects" >Projects</Link></span>
-            {/* <span className={router.pathname == "/aboutme" ? "active" : ""}><Link href="/aboutme">About Me</Link></span> */}
+            <span className={router.pathname == "/mywork" ? "active" : ""}><Link href="/mywork" >My Work</Link></span>
 				</Stack>
 			</Box>
 		</Flex>
