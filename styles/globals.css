@@ -11,13 +11,8 @@ body::-webkit-scrollbar
 }
 
 .active {
-  text-decoration: underline;
-  text-decoration-color: #FBB946;
-  margin-top: 3px;
-  border-bottom: 3px solid #FBB946;
-  display: inline-block;
-  bottom: 0px;
-  line-height: 1;
+  color: #f1a624;
+  margin-top: 1rem;
 }
 .head{
   display: inline-block;

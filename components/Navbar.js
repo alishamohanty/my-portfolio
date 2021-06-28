@@ -7,10 +7,19 @@ import {
 	Flex
 } from '@chakra-ui/react';
 import { useRouter } from "next/router";
+import Lottie from 'react-lottie'
+import * as animationData from '../data/music.json'
 
 const Navbar = (props) => {
   const router = useRouter()
-
+	const defaultOptions = {
+      loop: true,
+      autoplay: true, 
+      animationData: animationData,
+    }
+	const routeToLofi = () => {
+		router.push('https://lofibolly-club.vercel.app/')
+	}
 	return (
 		<Flex
 			as="nav"
@@ -26,7 +35,7 @@ const Navbar = (props) => {
 			pl={[4, 19, 50, 100]}
 		>
 			<Flex align="center" mr={5}>
-				<Box objectFit="cover" >
+				<Box objectFit="cover" alignSelf="end">
 					<Link href="/" >
 						<Heading size="lg" letterSpacing={'tighter'} color="#000" className="head">
 							AlishaM
@@ -44,10 +53,18 @@ const Navbar = (props) => {
 					color="black"
 					flexGrow={1}
           mt={{ base: 2, md: 0 }}
-          pt={2}
           px={2}
         >
-            <span className={router.pathname == "/mywork" ? "active" : ""}><Link href="/mywork" >My Work</Link></span>
+					<Box>
+						<a target="_blank" href="https://lofibolly-club.vercel.app/">
+						<Lottie options={defaultOptions}
+							isClickToPauseDisabled={true}
+              height={40}
+              width={40}/>
+							</a>
+						</Box>
+            <Box alignSelf="center"
+						className={router.pathname == "/mywork" ? "active" : ""}><Link href="/mywork" >My Work</Link></Box>
 				</Stack>
 			</Box>
 		</Flex>
