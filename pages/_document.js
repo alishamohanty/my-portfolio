@@ -12,6 +12,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+        <link rel="icon" href="laptop.ico" type="image/gif" sizes="20x20"></link>
         <script
                 async
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
