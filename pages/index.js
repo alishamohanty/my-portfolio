@@ -8,7 +8,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, scale: 1.01 }}
-          transition={{ ease: [0.67, 0.67, 0.83, 0.67], duration: 1.2 }}
+          transition={{ ease: [0.67, 0.67, 0.83, 0.67], duration: 2.2 }}
           exit={{ opacity: 0 }}
         >
           <Image
@@ -23,7 +23,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0.2 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.7 }}
+          transition={{ duration: 2 }}
           exit={{ opacity: 0 }}
         >
           Namaste. I am{' '}

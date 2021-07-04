@@ -12,7 +12,7 @@ const Project = ({ project }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ ease: [0.67, 0.67, 0.83, 0.67], duration: 1.9 }}
+      transition={{ ease: [0.67, 0.67, 0.83, 0.67], duration: 1.5 }}
       exit={{ opacity: 0 }}
     >
       <Box overflow="hidden" mb={10}>
