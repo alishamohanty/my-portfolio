@@ -3,7 +3,7 @@
     imageSrc: "Uncopied.png",
     imageAlt: "Uncopied ",
     description: "Frontend Developer at uncopied.org",
-    link: "https://uncopied-art-gl7dz.ondigitalocean.app/",
+    link: "https://dev.uncopied.art/",
     github: "",
     time: "Feb - June 2021",
     place: "Remote",
